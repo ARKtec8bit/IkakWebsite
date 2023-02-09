@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Kyokushinkaikan Allied Karate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/kankukak.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">DOJOS</a></li>
+                    <li><a href="">INSTRUCTORS</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>International Kyokushinkaikan Allied Karate</h1>
+            <p>Following the teachings of Sosai Masutatsu Oyama <br>United in Karate</p>
+            <a href="" class="hero-btn">Vist us to learn more</a>
+        </div>
+    </section>
+
+    <!----dojos---->
+    <section class="dojos">
+        <h1>Our Dojos</h1>
+        <p>Something about the dojos</p>
+        <div class="row">
+            <div class="dojo-col">
+                <h3>New Plymouth</h3>
+                <h4>Merrilands School, New Zealand</h4>
+                <p>Kancho / Shihan Peter Lowl<br>Sensei Alan Winch<br>Sensei Julie Winch<br>Sempai Craig Hintz</p>
+            </div>
+            <div class="dojo-col">
+                <h3>Inglewood</h3>
+                <h4>Mamakau Center, New Zealand</h4>
+                <p>Kancho / Shihan Peter Lowl<br>Sempai Alan Kissick<br>Sempai Mark Nutsford</p>
+            </div>
+            <div class="dojo-col">
+                <h3>Hawera</h3>
+                <h4>Hawera Scout Hall, New Zealand</h4>
+                <p>Kancho / Shihan Peter Lowl<br>Sempai Dean Smith<br>Sempai Natasha Potaka<br>Sempai Nick
+                    Potaka<br>Sempai Matt Levings</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="dojo-col">
+                <h3>Ironside</h3>
+                <h4>Redwood Park, South Australia</h4>
+                <p><br>Sensei Peter Hogarth<br>Sensei Abdullah Jaffara</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----Instructors ---- -->
+    <section class="instructors">
+        <h1>Our instructors</h1>
+        <p>somthing</p>
+        <div class="row">
+            <div class="instructors-col">
+                <img src="images/pl2.png">
+                <div class="layer">
+                    <h3>Kancho / Shihan Peter Lowl</h3>
+                    <h4>Shichidan 七段</h4>
+                </div>
+            </div>
+            <div class="instructors-col">
+                <img src="images/jw.png">
+                <div class="layer">
+                    <h3>Sensei Julie Winch</h3>
+                    <h4>Sandan 三段</h4>
+                </div>
+            </div>
+            <div class="instructors-col">
+                <img src="images/aw.png">
+                <div class="layer">
+                    <h3>Sensei Alan Winch</h3>
+                    <h4>Sandan 三段</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="instructors-col">
+                <img src="images/ph.png">
+                <div class="layer">
+                    <h3>Sensei Peter Hogarth</h3>
+                    <h4>Yondan 四段</h4>
+                </div>
+            </div>
+            <div class="instructors-col">
+                <img src="images/ak.png">
+                <div class="layer">
+                    <h3>Sempai Alan Kissick</h3>
+                    <h4>Shodan 初段 </h4>
+                </div>
+            </div>
+            <div class="instructors-col">
+                <img src="images/ch.png">
+                <div class="layer">
+                    <h3>Sempai Craig Hintz</h3>
+                    <h4>Shodan 初段</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
