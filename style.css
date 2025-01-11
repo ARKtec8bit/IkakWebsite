@@ -7,7 +7,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.7)), url(images/ikakinst.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.7)), url(images/ikakotaranakiaaa.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -224,7 +224,9 @@ nav .fa {
 }
 
 .instructors-col img {
-    width: 100%;
+    height: auto;
+    width: 25%;
+    padding-top: 50px;
 }
 
 .layer {
@@ -240,3 +242,96 @@ nav .fa {
 .layer:hover {
     background: rgba(120, 122, 130, 0.2);
 }
+
+
+.testamonials {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.testamonials h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.testamonials p {
+    color: lightslategray;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.05); /* Transparent background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #333; /* Matching text color within the dropdown */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px; /* Matching the existing font size */
+    text-align: center; /* Center the text */
+    position: relative;
+    transition: 0.5s; /* Smooth transition */
+  }
+  
+  /* Add underline transition */
+  .dropdown-content a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ecc60a; /* Underline color */
+    display: block;
+    margin: auto;
+    transition: 0.5s; /* Smooth transition */
+  }
+  
+  /* Change color of dropdown links on hover and apply underline transition */
+  .dropdown-content a:hover {
+    /* background-color: #ecc60a; Matching hover color */
+    color: aliceblue;
+  }
+  
+  .dropdown-content a:hover::after {
+    width: 100%; /* Show the underline on hover */
+  }
+  
+  /* Show the dropdown content when hovering */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Make sure the dropdown aligns well in responsive design */
+  @media(max-width: 700px) {
+    .nav-links ul li {
+      display: block;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+    }
+  
+    .dropdown-content a {
+      padding: 10px;
+    }
+  }
+  
