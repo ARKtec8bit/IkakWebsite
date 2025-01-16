@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Kyokushinkaikan Allied Karate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- -----header---- -->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/ikakkanku.png" alt="IKAKK Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="dojos.html">DOJOS</a></li>
+                    <li><a href="instructors.html">INSTRUCTORS</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">RESOURCES</a>
+                        <div class="dropdown-content">
+                            <a href="syllabus.html">Syllabus</a>
+                            <a href="forms.html">Forms</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>International Kyokushinkaikan Allied Karate</h1>
+            <p>Following the teachings of Sosai Masutatsu Oyama <br>United in Karate</p>
+            <a href="" class="hero-btn">Visit us to learn more</a>
+        </div>
+    </section>
+
+    <!----------Contact------------>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fa fa-map-marker"></i>123 Main Street, Wellington, New Zealand</p>
+                <p><i class="fa fa-envelope"></i>info@ikakk.org</p>
+                <p><i class="fa fa-phone"></i>+64 123 456 789</p>
+            </div>
+            <form id="contact-form" method="POST" action="contact.php" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="dojo">Dojo:</label>
+                <input type="text" id="dojo" name="dojo" required>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-------Footer------->
+    <section class="footer">
+        <h4>About us</h4>
+        <p>International Kyokushinkaikan Allied Karate is a group of dojos based in New Zealand and Australia.<br>United in karate</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <p>© 2025 International Kyokushinkaikan Allied Karate</p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+        
+        // Add an event listener to handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            var formData = new FormData(event.target);
+            
+            // Send form data to the server
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    alert('Your message has been sent successfully.');
+                    document.getElementById('contact-form').reset();
+                } else {
+                    alert('There was an error sending your message. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was a network error. Please try again later.');
+            });
+        });
+    </script>
+</body>
+
+</html>

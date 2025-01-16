@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Kyokushinkaikan Allied Karate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- -----header---- -->
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/ikakkanku.png" alt="IKAKK Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="dojos.html">DOJOS</a></li>
+                    <li><a href="instructors.html">INSTRUCTORS</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">RESOURCES</a>
+                        <div class="dropdown-content">
+                            <a href="syllabus.html">Syllabus</a>
+                            <a href="forms.html">Forms</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>International Kyokushinkaikan Allied Karate</h1>
+            <p>Following the teachings of Sosai Masutatsu Oyama <br>United in Karate</p>
+            <a href="" class="hero-btn">Visit us to learn more</a>
+        </div>
+    </section>
+
+    <!----------Events------------>
+    <section class="events">
+        <div class="events-content">
+            <div class="event">
+                <img src="images/Karate Classes Flyer Design Template - Made with PosterMyWall(2).jpg"alt="Term 1">
+                <h3>2025 Term 1 Returns</h3>
+                <p>January 2025</p>
+                <p>All Dojos</p>
+            </div>
+            <div class="event">
+                <img src="/images/Martial Arts Classes Square Video - Made with PosterMyWall.jpg" alt="Karate Workshop">
+                <h3>Karate Workshop and Fundraider</h3>
+                <p>Date: 19thth October 2024</p>
+                <p>Location: Ingleood Dojo</p>
+            </div>
+            <div class="event">
+                <img src="/images/karate - Made with PosterMyWall.jpg" alt="Summer Training Camp">
+                <h3>Yudansha Gradings</h3>
+                <p>Date: 25th May 2024</p>
+                <p>Location: Inglewood Dojo</p>
+            </div>
+        </div>
+        <div class="events-calendar">
+            <h3>Event Calendar</h3>
+            <table>
+                <tr>
+                    <th>March 2025</th>
+                </tr>
+                <tr>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>April 2025</th>
+                </tr>
+                <tr>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>December 2025</th>
+                </tr>
+                <tr>
+                    <td>15</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-------Footer------->
+    <section class="footer">
+        <h4>About us</h4>
+        <p>International Kyokushinkaikan Allied Karate is a group of dojos based in New Zealand and Australia.<br>United in karate</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <p>© 2025 International Kyokushinkaikan Allied Karate</p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
